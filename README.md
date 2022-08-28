@@ -10,7 +10,11 @@ complete and utter uselessness of computers for doing real mathematics:
 As the number of iterations increases the __computed approximation__ gets worse:
 
 ```
-Pi is approximately: 3.141599411558 after 1e+06 primes
-Pi is approximately: 3.141648570896 after 1e+07 primes
+# Pi is approximately: 3.190853749043 after 1e+02 primes
+# Pi is approximately: 3.147004121422 after 1e+03 primes
+# Pi is approximately: 3.145696225875 after 1e+04 primes
+# Pi is approximately: 3.142652505167 after 1e+05 primes
+# Pi is approximately: 3.141599411558 after 1e+06 primes
+# Pi is approximately: 3.141648570896 after 1e+07 primes
 
 ```
