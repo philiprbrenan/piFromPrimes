@@ -1,13 +1,11 @@
-#!/usr/bin/perl -I/home/phil/perl/cpan/DataTableText/lib/
+#!/usr/bin/perl
 #-------------------------------------------------------------------------------
 # Leonhard Euler's formula for pi using the prime numbers nicely illustrates the
 # complete and utter uselessness of computers for doing real mathematics.
 # Philip R Brenan at appaapps dot com, Appa Apps Ltd Inc., 2022
 #-------------------------------------------------------------------------------
-my $home   = currentDirectory;                                                  # Home folder
-
 my $N      = 1e6;                                                               # The number of primes we are going to multiply
-my $primes = '00'.('1' x $N);
+my $primes = '00'.('1' x $N);                                                   # The sieve
 
 sub nearest4($)                                                                 # Given a number find the nearest multiple of 4
  {my ($n) = @_;                                                                 # Number
@@ -15,24 +13,19 @@ sub nearest4($)                                                                 
   $r < 2 ? $n - $r : $n + 4 - $r;
  }
 
-my @p;
+my @p;                                                                          # Primes
 
 for my $i(2..$N)                                                                # Sieve of Erastothenes
- {if (substr($primes, $i, 1))
+ {if (substr $primes, $i, 1)
    {push @p, $i;
-    for my $j(1..$N/$i)                                                         # Strike
-     {substr($primes, $i * $j, 1) = '0';
-     }
+    substr($primes, $i * $_, 1) = '0' for 1..$N/$i;                             # Strike
    }
  }
 
 shift @p;                                                                       # Remove the only even prime
 
-my $p4 = 0;                                                                     # Product of primes make pi
-for my $p(@p)
- {my $f = nearest4($p);
-  $p4 += log($p) - log($f);
- }
+my $p4  = 0;                                                                    # Product of primes make pi
+   $p4 += log($_) - log(nearest4($_)) for @p;
 
 say STDERR sprintf "Pi is approximately: %.12f after %.0e primes", 4*exp($p4), $N;
 
