@@ -4,7 +4,7 @@
 # complete and utter uselessness of computers for doing real mathematics.
 # Philip R Brenan at appaapps dot com, Appa Apps Ltd Inc., 2022
 #-------------------------------------------------------------------------------
-my $N      = ARGV[0] // 1e6;                                                    # The number of primes we are going to multiply
+my $N      = $ARGV[0] // 1e6;                                                   # The number of primes we are going to multiply
 my $primes = '00'.('1' x $N);                                                   # The sieve
 
 sub nearest4($)                                                                 # Given a number find the nearest multiple of 4
