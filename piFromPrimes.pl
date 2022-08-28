@@ -29,5 +29,9 @@ my $p4  = 0;                                                                    
 
 say STDERR sprintf "Pi is approximately: %.12f after %.0e primes", 4*exp($p4), $N;
 
+# Pi is approximately: 3.190853749043 after 1e+02 primes
+# Pi is approximately: 3.147004121422 after 1e+03 primes
+# Pi is approximately: 3.145696225875 after 1e+04 primes
+# Pi is approximately: 3.142652505167 after 1e+05 primes
 # Pi is approximately: 3.141599411558 after 1e+06 primes
 # Pi is approximately: 3.141648570896 after 1e+07 primes
