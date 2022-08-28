@@ -27,7 +27,7 @@ shift @p;                                                                       
 my $p4  = 0;                                                                    # Product of primes make pi
    $p4 += log($_) - log(nearest4($_)) for @p;
 
-say STDERR sprintf "Pi is approximately: %.12f after %.0e primes", 4*exp($p4), $N;
+say sprintf "Pi is approximately: %.12f after %.0e primes", 4*exp($p4), $N;
 
 # Pi is approximately: 3.190853749043 after 1e+02 primes
 # Pi is approximately: 3.147004121422 after 1e+03 primes
