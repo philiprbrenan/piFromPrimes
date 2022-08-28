@@ -49,7 +49,12 @@ jobs:
 
     - name: Run
       run: |
-        perl piFromPrimes.pl
+        perl piFromPrimes.pl 1e2
+        perl piFromPrimes.pl 1e3
+        perl piFromPrimes.pl 1e4
+        perl piFromPrimes.pl 1e5
+        perl piFromPrimes.pl 1e6
+        perl piFromPrimes.pl 1e7
 END
 
 lll "Ubuntu work flow for $repo ", writeFileUsingSavedToken($user, $repo, $wf, $y);
