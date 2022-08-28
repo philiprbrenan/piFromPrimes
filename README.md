@@ -5,9 +5,7 @@
 Leonhard Euler's formula for [𝝿](https://en.wikipedia.org/wiki/Pi) using the prime numbers nicely illustrates the
 complete and utter uselessness of computers for doing real mathematics.
 
-![](https://github.com/philiprbrenan/piFromPrimes/workflows/Test/badge.svg)
-
-
+![](https://raw.githubusercontent.com/philiprbrenan/piFromPrimes/main/formula.png)
 
 As the number of iterations increases the appproximation gets worse:
 
