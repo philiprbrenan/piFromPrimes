@@ -4,24 +4,16 @@
 # complete and utter uselessness of computers for doing real mathematics.
 # Philip R Brenan at appaapps dot com, Appa Apps Ltd Inc., 2022
 #-------------------------------------------------------------------------------
-use v5.30;
-use warnings FATAL => qw(all);
-use strict;
-use Carp;
-use Data::Dump qw(dump);
-use Data::Table::Text qw(:all);
-use utf8;
-
 my $home   = currentDirectory;                                                  # Home folder
+
+my $N      = 1e6;                                                               # The number of primes we are going to multiply
+my $primes = '00'.('1' x $N);
 
 sub nearest4($)                                                                 # Given a number find the nearest multiple of 4
  {my ($n) = @_;                                                                 # Number
   my $r = $n % 4;
   $r < 2 ? $n - $r : $n + 4 - $r;
  }
-
-my $N = 1e6;                                                                    # The number of primes we are going to multiply
-my $primes = '00'.('1' x $N);
 
 my @p;
 
@@ -41,6 +33,7 @@ for my $p(@p)
  {my $f = nearest4($p);
   $p4 += log($p) - log($f);
  }
+
 say STDERR sprintf "Pi is approximately: %.12f after %.0e primes", 4*exp($p4), $N;
 
 # Pi is approximately: 3.141599411558 after 1e+06 primes
