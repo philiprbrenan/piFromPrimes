@@ -7,7 +7,7 @@ complete and utter uselessness of computers for doing real mathematics.
 
 ![](https://raw.githubusercontent.com/philiprbrenan/piFromPrimes/main/formula.png)
 
-As the number of iterations increases the appproximation gets worse:
+As the number of iterations increases the __computed approximation__ gets worse:
 
 ```
 Pi is approximately: 3.141599411558 after 1e+06 primes
