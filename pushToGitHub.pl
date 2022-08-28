@@ -1,7 +1,7 @@
 #!/usr/bin/perl -I/home/phil/perl/cpan/DataTableText/lib/ -I/home/phil/perl/cpan/GitHubCrud/lib/
 #-------------------------------------------------------------------------------
 # Pi from primes
-# Philip R Brenan at gmail dot com, Appa Apps Ltd Inc., 2021
+# Philip R Brenan at gmail dot com, Appa Apps Ltd Inc., 2022
 #-------------------------------------------------------------------------------
 use warnings FATAL => qw(all);
 use strict;
